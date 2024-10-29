@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <title>Kashmir Avenue Realty</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    /* Global Styles */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cinzel", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      background-color: whitesmoke;
+    }
+
+    /* Navigation Styles */
+    .navbar {
+      background-color: whitesmoke !important;
+    }
+
+    .logo {
+      width: 8%;
+    }
+
+    .navbar img {
+      margin-left: 50px;
+    }
+
+    #navbarNav ul li a {
+      color: #e42126;
+      font-weight: bold;
+      margin-right: 25px;
+    }
+
+    #navbarNav ul li a:hover {
+      color: #8a602a;
+    }
+
+    #navbarNav ul li:nth-child(4) {
+      margin-right: 50px;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #8a602a;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url("./assets/img/header.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #000;
+      font-size: 2.0rem;
+      margin: 0;
+      font-weight: bold;
+      animation: fadeInSlideUp 5s ease-out forwards;
+    }
+
+    /* Build Section */
+    .build {
+      position: relative;
+      height: 100vh;
+      background-image: url("./assets/img/build-section.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .build-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .build h1 {
+      color: #000;
+      font-size: 2em;
+      margin: 0;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .build .container p {
+      text-align: left;
+      color: #000;
+    }
+
+    /* About and Contact Sections */
+    #about,
+    #contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    #about h2,
+    #contact h2,
+    #properties h2 {
+      color: #8a602a;
+    }
+
+    /* Properties Section */
+    #properties {
+      background-color: whitesmoke;
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title,
+    .card-text {
+      font-size: 13px;
+    }
+
+    #properties>div>div>div:nth-child(n)>div.card.property-card.mb-4>div>button:hover {
+      background-color: #000;
+    }
+
+    .btn-primary.focus,
+    .btn-primary:focus {
+      background-color: #000;
+    }
+
+    #property1Modal>div>div>div.modal-footer>a:hover {
+      background-color: #000;
+    }
+
+    #property2Modal>div>div>div.modal-footer>a:hover {
+      background-color: #000;
+    }
+
+    #property3Modal>div>div>div.modal-footer>a:hover {
+      background-color: #000;
+    }
+
+
+
+
+
+    /* Button Styles */
+    .cta-btn {
+      margin-top: 200px;
+    }
+
+    .cta-btn>a {
+      background-color: #d2042d !important;
+      border: none !important;
+      width: 150px;
+    }
+
+    .cta-btn>a:hover {
+      background-color: #8a602a !important;
+    }
+
+    .btn-primary {
+      background-color: #8a602a;
+      border: none;
+    }
+
+    #contact>div>a:hover {
+      background-color: #000;
+    }
+
+    #contact>div>div>div>div>div>a:nth-child(n)>svg>path {
+      color: #8a602a;
+    }
+
+    #contact>div>div>div>div>div>a:nth-child(n)>svg>path:hover {
+      color: #000;
+    }
+
+
+
+    /* Back to Top Button */
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #8a602a;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #333;
+    }
+
+    /* Utility Classes */
+
+    .section-divider {
+      border-top: 2px solid #000;
+      margin: 40px auto;
+      width: 80%;
+    }
+
+    /* Animation */
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Media Queries */
+    @media (max-width: 991px) {
+      .navbar img {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 25%;
+      }
+
+      .cta-btn {
+        margin-top: 400px;
+      }
+
+      .cta-btn>a {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <img class="navbar-brand logo" src="./assets/img/logo.png" alt="logo" />
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#build">Build With Us</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="#properties">Properties</a>
+          </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>We Know What Your Dreams Are About</h1>
+    </div>
+
+    <div class="cta-btn">
+      <a href="https://wa.me/+917889360006?text=Hello,%20I%20need%20help%20with..." type="button"
+        class="btn btn-primary btn-lg">Sell</a>
+      <a href="#properties" type="button" class="btn btn-primary btn-lg">Buy</a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 text-center vh-100">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="lead">
+        A reputable real estate company in Jammu & Kashmir, Kashmir Avenue Realty® is committed to assisting you in
+        locating your ideal residence. With a focus on building, selling, and buying real estate, we provide a smooth
+        process from beginning to end.
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Get Started</a> -->
+      <!-- <a href="tel:+919103072998" class="btn btn-primary">Get Started</a> -->
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Build with us Section -->
+  <section id="build" class="build">
+    <div class="container">
+      <h1>Why Work with Us to Build?</h1>
+      <p>
+        Local Knowledge: We are the only ones who truly understand Kashmir.
+        <br />We can help you with anything from choosing the perfect plot to
+        negotiating local laws.
+      </p>
+      <div class="cta-btn">
+        <!-- <a type="button" class="btn btn-primary ">Build</a> -->
+        <a class="btn btn-primary btn-lg" href="https://wa.me/+917889360006?text=Hello,%20I%20need%20help%20with..."
+          target="_blank">Build</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Section -->
+  <section id="properties" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-3">Featured Properties</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card property-card mb-4">
+            <a href="./assets/img/p1.png">
+              <img class="rounded" src="./assets/img/p1.png" alt="Property 1" />
+            </a>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Beautiful House</h5>
+              <p class="card-text">3 Bed, 3 Bath, 1 Hall</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#property1Modal">
+                View Details
+              </button>
+            </div> -->
+          </div>
+
+          <!-- Property 1 Modal -->
+          <div class="modal fade" id="property1Modal" tabindex="-1" role="dialog" aria-labelledby="property1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="property1ModalLabel">
+                    Beautiful House Details
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="./assets/img/p1.png" class="img-fluid mb-3" alt="Property 1" />
+                  <p>3 Bed, 3 Bath, 1 Hall</p>
+                  <p>Price: xxxxxxxx</p>
+                  <p>
+                    Land: 10 marlas milkiyat 70 mtrs from National Highway
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                  </button>
+
+                  <a href="tel:+919103072998" class="btn btn-primary">
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Property 1 Modal -->
+        </div>
+        <div class="col-md-4">
+          <div class="card property-card mb-4">
+            <a href="./assets/img/p2.png">
+              <img class="rounded" src="./assets/img/p2.png" alt="Property 2" />
+            </a>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Beautiful House</h5>
+              <p class="card-text">3 Bed, 3 Bath, 1 Hall</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#property2Modal">
+                View Details
+              </button>
+            </div> -->
+          </div>
+        </div>
+        <!-- Property 2 Modal -->
+        <div class="modal fade" id="property2Modal" tabindex="-1" role="dialog" aria-labelledby="property2ModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="property2ModalLabel">
+                  Beautiful House Details
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="./assets/img/p2.png" class="img-fluid mb-3" alt="Property 2" />
+                <p>3 Bed, 3 Bath, 1 Hall</p>
+                <p>Price: xxxxxxxx</p>
+                <p>
+                  Land: 11.5 marlas milkiyat 500 mtr’s from National Highway
+                  Drainage & Macadam Road
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
+                <a href="tel:+919103072998" class="btn btn-primary">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Property 2 Modal -->
+        <div class="col-md-4">
+          <div class="card property-card mb-4">
+            <a href="./assets/img/p3.png">
+              <img class="rounded" src="./assets/img/p3.png" alt="Property 3" />
+            </a>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Fully Furnished House</h5>
+              <p class="card-text">3 Bed, 2 Bath, 1 Hall</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#property3Modal">
+                View Details
+              </button>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Property 3 Modal -->
+        <div class="modal fade" id="property3Modal" tabindex="-1" role="dialog" aria-labelledby="property3ModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="property3ModalLabel">
+                  Fully Furnished House Details
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="./assets/img/p3.png" class="img-fluid mb-3 justify-content-center" alt="Property 3" />
+                <p>3 Bed, 2 Bath, 1 Hall</p>
+                <p>Price: xxxxxxxx</p>
+                <p>Land: 10 marlas milkiyat 70 mtrs from National Highway</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
+                <a href="tel:+919103072998" class="btn btn-primary">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Property 3 Modal -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 text-center vh-100">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="lead">
+        Looking to buy, sell, or build your dream property in Kashmir? We're
+        here to help! Get in touch with Kashmir Avenue Realty for all your real
+        estate needs.
+      </p>
+      <a href="tel:+919103072998" class="btn btn-primary"> Contact Now </a>
+
+      <div class="container my-3">
+        <div class="row">
+          <div class="col text-center">
+            <div class="d-flex justify-content-center social-icons">
+              <!-- <a href="https://www.facebook.com/kashmir.realestate.3?mibextid=ZbWKwL" target="_blank" class="mx-3">
+                <i class="fab fa-facebook-f"></i>
+              </a> -->
+
+              </a>
+              <a href="https://www.instagram.com/kashmir_avenue_realty/" target="_blank" class="mx-3">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UCiy_FtvIuPkFAaKK2a7_6aA" target="_blank" class="mx-3">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 IntentBold. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        backToTopBtn.style.display = "block"; // Show button
+      } else {
+        backToTopBtn.style.display = "none"; // Hide button
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Smooth scroll effect
+      });
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
